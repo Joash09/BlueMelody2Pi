@@ -3,7 +3,8 @@ package eee3097s.joash.bluemelody2pi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class ComposeModeActivity extends AppCompatActivity {
 
@@ -14,16 +15,23 @@ public class ComposeModeActivity extends AppCompatActivity {
     }
 
     public void connect(View view){
-        EditText txtInput = findViewById(R.id.txtInput);
+        TextView txtInput = findViewById(R.id.txtInput);
         String dataInput = txtInput.getText().toString();
-        if (dataInput != ""){
+        if (dataInput.equals("")){
             BluetoothObject bluetoothObject = new BluetoothObject(this);
             bluetoothObject.connect(dataInput);
         }
     }
 
     public void clearText(View view){
-        EditText txtInput = findViewById(R.id.txtInput);
+        TextView txtInput = findViewById(R.id.txtInput);
         txtInput.setText("");
+    }
+
+    public void notePressed(View view){
+        Button btnPressed = (Button) view;
+        TextView txtInput = findViewById(R.id.txtInput);
+        CharSequence currentTxt = txtInput.getText();
+        btnPressed.setText(currentTxt.toString()+btnPressed.getText());
     }
 }
