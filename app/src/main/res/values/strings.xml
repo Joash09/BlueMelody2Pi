@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">BlueMelody2Pi</string>
+    <string name="strConnect">Send to Pi</string>
+
+    <string name="strStatus">Please select a song</string>
+    <string name="strWifiConSuc">Connected to RPi wifi network</string>
+    <string name="strWifiConFailed">Connection to wifi failed</string>
+    <string name="strSockSuc">Connection to RPi has been established</string>
+    <string name="strSockFail">Connection to RPi has failed</string>
+    <string name="strDataSuc">Data has been successfully transmitted</string>
+    <string name="strDataFail">Data has failed to transmit</string>
+
+    <string name="strSelectedSong">You have selected song </string>
+    <string name="strSend">Sending to RPi</string>
+    <string name="strSent">Data has been sent</string>
+
+    <string name="blueDis">Bluetooth is disable. Please try again</string>
+    <string name="strComposeMode">Compose Mode</string>
+    <string name="strEnterInput">Enter the input string here</string>
+    <string name="strClear">Clear</string>
+</resources>
