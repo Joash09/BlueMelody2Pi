@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ComposeModeActivity">
 
     <TextView
@@ -11,8 +11,56 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/strEnterInput"
+        android:padding="24dp"
+        />
+
+    <TextView
+        android:id="@+id/lblNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strNotes"/>
+
+    <SeekBar
+        android:id="@+id/skbarNotes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="11"
         android:padding="8dp"
         />
+
+    <TextView
+        android:id="@+id/lblOctave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strOctave"/>
+
+    <SeekBar
+        android:id="@+id/skbarOctave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="8"
+        android:padding="8dp"
+        />
+
+    <TextView
+        android:id="@+id/lblDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strDuration"/>
+
+    <SeekBar
+        android:id="@+id/skbarDuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="9"
+        android:padding="8dp"
+        />
+
+    <TextView
+        android:id="@+id/lblVolume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strVolume"/>
 
     <SeekBar
         android:id="@+id/skbarVolume"
@@ -20,37 +68,14 @@
         android:layout_height="wrap_content"
         android:max="9"
         android:padding="8dp"
-
-        app:layout_constraintTop_toBottomOf="@id/txtInput"/>
-
-    <SeekBar
-        android:id="@+id/skbarDuration"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:max="100"
-        android:padding="8dp"
-
-        app:layout_constraintTop_toBottomOf="@id/skbarVolume"
         />
-
-    <SeekBar
-        android:id="@+id/skbarNotes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:max="12"
-        android:padding="8dp"
-
-        app:layout_constraintTop_toBottomOf="@id/skbarDuration"/>
 
     <Button
         android:id="@+id/btnAddNote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add note"
-
-        app:layout_constraintBottom_toTopOf="@id/btnSend"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:onClick="addNote"
         />
 
     <Button
@@ -59,10 +84,6 @@
         android:layout_height="wrap_content"
         android:text="@string/strConnect"
         android:onClick="connect"
-
-        app:layout_constraintBottom_toTopOf="@id/btnClear"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
         />
 
     <Button
@@ -71,10 +92,6 @@
         android:layout_height="wrap_content"
         android:text="@string/strClear"
         android:onClick="clearText"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
         />
 
-</android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.LinearLayoutCompat>

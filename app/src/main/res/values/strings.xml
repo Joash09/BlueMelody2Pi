@@ -18,4 +18,9 @@
     <string name="strComposeMode">Compose Mode</string>
     <string name="strEnterInput">Enter the input string here</string>
     <string name="strClear">Clear</string>
+
+    <string name="strNotes">Notes</string>
+    <string name="strOctave">Octave</string>
+    <string name="strDuration">Duration</string>
+    <string name="strVolume">Volume</string>
 </resources>
