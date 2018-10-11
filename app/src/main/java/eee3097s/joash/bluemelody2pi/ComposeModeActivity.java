@@ -17,7 +17,7 @@ public class ComposeModeActivity extends AppCompatActivity {
     public void connect(View view){
         TextView txtInput = findViewById(R.id.txtInput);
         String dataInput = txtInput.getText().toString();
-        if (dataInput.equals("")){
+        if (!dataInput.equals("")){
             BluetoothObject bluetoothObject = new BluetoothObject(this);
             bluetoothObject.connect(dataInput);
         }
